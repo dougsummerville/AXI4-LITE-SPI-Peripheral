@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>binghamton.edu</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>axi_spi_simple</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>s00_axi</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="s00_axi"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axi_aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axi_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_ACLK.ASSOCIATED_BUSIF">s00_axi</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_ACLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>s00_axi</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>reg0</spirit:name>
+        <spirit:baseAddress spirit:format="bitString" spirit:resolve="user" spirit:bitStringLength="32">0</spirit:baseAddress>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
+        <spirit:width spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1) + 1">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>axi_spi_simple</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>297c6979</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>axi_spi_simple</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>297c6979</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>5c1917bc</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>mosi</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ss</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.ss" xilinx:dependency="$ACTIVE_LOW_SS=false">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ssn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.ssn" xilinx:dependency="$ACTIVE_LOW_SS=true">true</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>miso</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>gpo</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.GPIO_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gpo" xilinx:dependency="$USE_GPIO=true">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="boolean">
+        <spirit:name>ACTIVE_LOW_SS</spirit:name>
+        <spirit:displayName>Active Low Ss</spirit:displayName>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ACTIVE_LOW_SS">true</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>GPIO_WIDTH</spirit:name>
+        <spirit:displayName>Gpio Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.GPIO_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="boolean">
+        <spirit:name>USE_GPIO</spirit:name>
+        <spirit:displayName>Use Gpio</spirit:displayName>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.USE_GPIO">false</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 Axi Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH">4</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/axi_spi_simple_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/axi_spi_simple.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_3eed4612</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/axi_spi_simple_S00_AXI.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/axi_spi_simple.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/axi_spi_simple_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_5c1917bc</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>axi_spi_simple</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>ACTIVE_LOW_SS</spirit:name>
+      <spirit:displayName>Active Low Ss</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ACTIVE_LOW_SS">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>GPIO_WIDTH</spirit:name>
+      <spirit:displayName>Gpio Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GPIO_WIDTH" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>USE_GPIO</spirit:name>
+      <spirit:displayName>Use Gpio</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_GPIO">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 Axi Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH">4</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">axi_spi_simple</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">akintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>axi_spi_simple</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:vendorDisplayName>Binghamton University ECE Department</xilinx:vendorDisplayName>
+      <xilinx:vendorURL>https://www.binghamton.edu/electrical-computer-engineering/</xilinx:vendorURL>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:axi_spi_simple:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>binghamton.edu:user:axi_spi_simple_v1_0:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2021-12-23T03:05:03Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e5b8c72_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34394d70_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@310b09cc_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40ac9015_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3799a015_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@707cfdff_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5232fac6_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bc2ef5d_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ae887ec_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@168cd58c_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38132f90_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2cea28e5_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3cb5613a_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50a12de9_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b628be5_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4764bb5b_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d3564e2_ARCHIVE_LOCATION">c:/users/dsumm/desktop/eece387/ip_repos/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3ac22130_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ac90131_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76aa2a23_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@13db0b0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1868c340_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39b59ff4_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6235fbb8_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43172fec_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7090acf3_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ff340c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72249917_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d0ebcfa_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e2f4416_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b498979_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a0f05cf_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c768316_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27a426db_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30b7ec79_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4bbdbc1d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@438c72b6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c6a8881_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d4490bc_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f77ec80_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5fcf7527_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@492d2d68_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32aa9fd1_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b986411_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@434a34f8_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3215e4b6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58bcc5f9_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d5151d3_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44a3118d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25a564f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32678d06_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59e7a84c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60f0eba4_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45e89e33_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ee1e3f1_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4406cdda_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@60737edb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6789592_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f807930_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28c8f123_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@658ee790_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57d8230c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ba7402b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2821dc2e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@516d3077_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b563991_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2dce0b3b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75496358_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@426b4cc2_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1eeedbe6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2704c093_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1fe679f0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b64e137_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@64acf0eb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34a28ac5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42bb5b8b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@366fa7d6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1be39640_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@424c87af_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41be1d6a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f41ea4c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55f0a909_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e880120_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d1e3169_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@523aed31_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77c21194_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2164bb59_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ad53a91_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42bab0e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d906151_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a864cb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5eadfa65_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37606ff6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59100d91_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23993316_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@226e41a9_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45479dea_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8ffb4b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6be1340a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69788b04_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f19087e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a81330f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e415856_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e10eb7d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37fe545c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79da3f51_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ed1cc56_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30f7707_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79caa6a7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66c46614_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6cf44d94_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58ae7b7b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1237f316_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@377d94f1_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59d2719d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2527ca49_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@166bdb45_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79c9e95f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ebbc096_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6328d5a0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29922ea6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c043ffd_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@530d40d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22e8e34f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d9a274b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f97eead_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@408cfd61_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@cad81b4_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a21781d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d39fb49_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@120785d5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7edb68cc_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71100773_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7849e5cb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9dae060_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@166a12c9_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1caa170b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17a122f6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75dc0d8e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17529faa_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6003bb9e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b5b0c1e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39b1fb4b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@522380ca_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@742bbf99_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f86442e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5170662f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@200acd6d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62569c90_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3ce1e38_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c4ac99b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7993b398_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43ae427_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b1de6f5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53d9c8b1_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@504c7cfb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bd48084_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@372450e5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a212a1d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b9337ac_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15d2dbe2_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78e075ec_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e856a2f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a24dc14_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6be27d84_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3de1f733_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77902ab2_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ca99531_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44d841aa_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42b36060_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57e6a05e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5b9c5d7a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d78b8e7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27224c23_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76765c3_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@876cc07_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c407184_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12b27e46_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b1ab4fa_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38a42941_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a6b6914_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4fa6b7ba_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71055feb_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b056581_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40bf92ae_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@415f005d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1e0ff607_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f4ae79_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5eb3506e_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37fb6c5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d861dfc_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3871c308_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14f72ada_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6818a34_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75a4e99_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55ec9ff2_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@434b9ef8_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45aa3d6d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28a75907_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10c477fe_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78ce7b80_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61e4e52c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c3f5f1a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b3bd99_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4370f307_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bfc5104_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71150919_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5de40fa6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@49149e38_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35476132_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38af5ad7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7803e619_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f52dc01_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39513a6f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@697f68e5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76d6c69c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d23344b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@31c7d9a7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54dd631d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@19dae2a0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ac390ca_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c756c8f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47fbda60_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d120a31_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7df1c6dc_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1aef715a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27e97465_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@719af769_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65149019_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1455c03a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4dd66790_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@635fb355_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69b4378d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6bee978d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@277a156_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43e880c7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@13f3815d_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78be8826_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70bc1cac_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66ccfcb4_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e4de65_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3846f2b2_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16307bb0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6833c0a6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@671e34f4_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@599043d5_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14db5bf6_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22095e1b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c5714ba_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2467b60b_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e0b9965_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b524fe3_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50218a0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65cb7d83_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6dd6b0ef_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@699df4aa_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@431150c0_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44be5e6f_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@549fb8c1_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2299a3b7_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23e2351a_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a765c0c_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c3e3a91_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d43c261_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ae27571_ARCHIVE_LOCATION">c:/Users/dsumm/Desktop/EECE387/ip_repo/axi_spi_simple_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9add38af"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="871c369d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f485f874"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="823d3cca"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0b5d7c19"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="27e90ba3"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
