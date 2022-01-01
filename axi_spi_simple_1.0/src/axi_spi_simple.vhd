@@ -26,66 +26,97 @@ use ieee.numeric_std.all;
 
 entity axi_spi_simple is
 	generic (
-		-- Users to add parameters here
         ACTIVE_LOW_SS : boolean := true;
         GPIO_WIDTH: integer := 32;
         USE_GPIO: boolean:= false;
-
-		-- User parameters ends
-		-- Do not modify the parameters beyond this line
-
-
-		-- Parameters of Axi Slave Bus Interface S00_AXI
-		C_S00_AXI_DATA_WIDTH	: integer	:= 32;
-		C_S00_AXI_ADDR_WIDTH	: integer	:= 4
+		SAXI_DATA_WIDTH	: integer	:= 32;
+		SAXI_ADDR_WIDTH	: integer	:= 2
 	);
 	port (
-		-- Users to add ports here
         mosi: out std_logic;
         ss: out std_logic;
         ssn: out std_logic;
         sclk: out std_logic;
         miso: in std_logic;
         gpo: out std_logic_vector(GPIO_WIDTH-1 downto 0);
-		-- User ports ends
-		-- Do not modify the ports beyond this line
-
-
-		-- Ports of Axi Slave Bus Interface S00_AXI
-		s00_axi_aclk	: in std_logic;
-		s00_axi_aresetn	: in std_logic;
-		s00_axi_awaddr	: in std_logic_vector(C_S00_AXI_ADDR_WIDTH-1 downto 0);
-		s00_axi_awprot	: in std_logic_vector(2 downto 0);
-		s00_axi_awvalid	: in std_logic;
-		s00_axi_awready	: out std_logic;
-		s00_axi_wdata	: in std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-		s00_axi_wstrb	: in std_logic_vector((C_S00_AXI_DATA_WIDTH/8)-1 downto 0);
-		s00_axi_wvalid	: in std_logic;
-		s00_axi_wready	: out std_logic;
-		s00_axi_bresp	: out std_logic_vector(1 downto 0);
-		s00_axi_bvalid	: out std_logic;
-		s00_axi_bready	: in std_logic;
-		s00_axi_araddr	: in std_logic_vector(C_S00_AXI_ADDR_WIDTH-1 downto 0);
-		s00_axi_arprot	: in std_logic_vector(2 downto 0);
-		s00_axi_arvalid	: in std_logic;
-		s00_axi_arready	: out std_logic;
-		s00_axi_rdata	: out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-		s00_axi_rresp	: out std_logic_vector(1 downto 0);
-		s00_axi_rvalid	: out std_logic;
-		s00_axi_rready	: in std_logic
+		saxi_aclk	: in std_logic;
+		saxi_aresetn	: in std_logic;
+		saxi_awaddr	: in std_logic_vector(31 downto 0);
+		saxi_awprot	: in std_logic_vector(2 downto 0);
+		saxi_awvalid	: in std_logic;
+		saxi_awready	: out std_logic;
+		saxi_wdata	: in std_logic_vector(SAXI_DATA_WIDTH-1 downto 0);
+		saxi_wstrb	: in std_logic_vector((SAXI_DATA_WIDTH/8)-1 downto 0);
+		saxi_wvalid	: in std_logic;
+		saxi_wready	: out std_logic;
+		saxi_bresp	: out std_logic_vector(1 downto 0);
+		saxi_bvalid	: out std_logic;
+		saxi_bready	: in std_logic;
+		saxi_araddr	: in std_logic_vector(31 downto 0);
+		saxi_arprot	: in std_logic_vector(2 downto 0);
+		saxi_arvalid	: in std_logic;
+		saxi_arready	: out std_logic;
+		saxi_rdata	: out std_logic_vector(SAXI_DATA_WIDTH-1 downto 0);
+		saxi_rresp	: out std_logic_vector(1 downto 0);
+		saxi_rvalid	: out std_logic;
+		saxi_rready	: in std_logic
 	);
 end axi_spi_simple;
 
 architecture arch_imp of axi_spi_simple is
- 
+component axi4_lite_interface_v1_0 is
+	generic (
+	DATA_BUS_IS_64_BITS: integer range 0 to 1 := 0; --0:32b, 1:64b
+	--Address space of subordinate, in bits
+	ADDR_WIDTH	: integer range 1 to 12	:= 2;
+	--whether the slave will use WSTRB
+	USE_WRITE_STROBES : boolean := false;
+	--subordinate has synchronous read output
+	SUBORDINATE_SYNCHRONOUS_READ_PORT: boolean :=true
+	);
+	port (
+	--_AXI SUBORDINATE SIGNALS
+		--_AXI SUBORDINATE SIGNALS
+	SAXI_ACLK	: in std_logic;
+	SAXI_ARESETN	: in std_logic;
+	SAXI_AWADDR	: in std_logic_vector(31 downto 0);
+	SAXI_AWPROT	: in std_logic_vector(2 downto 0);
+    SAXI_AWVALID	: in std_logic;
+	SAXI_AWREADY	: out std_logic;
+	SAXI_WDATA	: in std_logic_vector(32*(1+DATA_BUS_IS_64_BITS) -1 downto 0);
+	SAXI_WSTRB	: in std_logic_vector((4*(1+DATA_BUS_IS_64_BITS))-1 downto 0);
+	SAXI_WVALID	: in std_logic;
+	SAXI_WREADY	: out std_logic;
+	SAXI_BRESP	: out std_logic_vector(1 downto 0);
+	SAXI_BVALID	: out std_logic;
+	SAXI_BREADY	: in std_logic;
+	SAXI_ARADDR	: in std_logic_vector(31 downto 0);
+	SAXI_ARPROT	: in std_logic_vector(2 downto 0);
+	SAXI_ARVALID	: in std_logic;
+	SAXI_ARREADY	: out std_logic;
+    SAXI_RDATA	: out std_logic_vector(31 downto 0);
+	SAXI_RRESP	: out std_logic_vector(1 downto 0);
+	SAXI_RVALID	: out std_logic;
+	SAXI_RREADY	: in std_logic;
+	--Subordinate Interface
+	read_address: out std_logic_vector(ADDR_WIDTH-1 downto 0);
+	write_address: out std_logic_vector(ADDR_WIDTH-1 downto 0);
+	read_enable: out std_logic;
+	write_enable: out std_logic;
+	write_strobe: out std_logic_vector((4*(1+DATA_BUS_IS_64_BITS))-1 downto 0);
+	read_data: in std_logic_vector(32*(1+DATA_BUS_IS_64_BITS) -1 downto 0);
+	write_data: out std_logic_vector(32*(1+DATA_BUS_IS_64_BITS) -1 downto 0);
+	clk: out std_logic;
+	resetn: out std_logic
+	);
+	end component;
+
 	-- component declaration
-	component axi_spi_simple_S00_AXI is
+	component spi_peripheral is
 		generic (
 		GPIO_WIDTH: integer := 32;
         USE_GPIO: boolean:= false;
-        ACTIVE_LOW_SS: boolean :=false;
-		C_S_AXI_DATA_WIDTH	: integer	:= 32;
-		C_S_AXI_ADDR_WIDTH	: integer	:= 4
+        ACTIVE_LOW_SS: boolean :=false
 		);
 		port (
 		mosi: out std_logic;
@@ -94,75 +125,95 @@ architecture arch_imp of axi_spi_simple is
         sclk: out std_logic;
         miso: in std_logic;
         gpo: out std_logic_vector(GPIO_WIDTH-1 downto 0);
-
-		S_AXI_ACLK	: in std_logic;
-		S_AXI_ARESETN	: in std_logic;
-		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
-		S_AXI_AWPROT	: in std_logic_vector(2 downto 0);
-		S_AXI_AWVALID	: in std_logic;
-		S_AXI_AWREADY	: out std_logic;
-		S_AXI_WDATA	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-		S_AXI_WSTRB	: in std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0);
-		S_AXI_WVALID	: in std_logic;
-		S_AXI_WREADY	: out std_logic;
-		S_AXI_BRESP	: out std_logic_vector(1 downto 0);
-		S_AXI_BVALID	: out std_logic;
-		S_AXI_BREADY	: in std_logic;
-		S_AXI_ARADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
-		S_AXI_ARPROT	: in std_logic_vector(2 downto 0);
-		S_AXI_ARVALID	: in std_logic;
-		S_AXI_ARREADY	: out std_logic;
-		S_AXI_RDATA	: out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-		S_AXI_RRESP	: out std_logic_vector(1 downto 0);
-		S_AXI_RVALID	: out std_logic;
-		S_AXI_RREADY	: in std_logic
+        write_strobe: in std_logic_vector(3 downto 0);
+        read_address: in std_logic_vector(1 downto 0);
+        write_address: in std_logic_vector(1 downto 0);
+        write_enable: in std_logic;
+        read_enable: in std_logic;
+        read_data: out std_logic_vector(31 downto 0);
+        write_data: in std_logic_vector(31 downto 0);
+        clk: in std_logic;
+        resetn: in std_logic
 		);
-	end component axi_spi_simple_S00_AXI;
+	end component spi_peripheral;
+   
+    signal read_address:  std_logic_vector(1 downto 0);
+    signal write_address:  std_logic_vector(1 downto 0);
+    signal read_enable:  std_logic;
+    signal write_enable:  std_logic;
+    signal read_data:  std_logic_vector(31 downto 0);
+    signal write_data:  std_logic_vector(31 downto 0);
+    signal write_strobe: std_logic_vector(3 downto 0);
 
+    signal clk: std_logic;
+    signal resetn: std_logic;
+    constant is_64b_data_bus: integer := (SAXI_DATA_WIDTH)/32-1; 
 begin
 
--- Instantiation of Axi Bus Interface S00_AXI
-axi_spi_simple_S00_AXI_inst : axi_spi_simple_S00_AXI
-	generic map (
-	    GPIO_WIDTH => GPIO_WIDTH,
-        USE_GPIO => USE_GPIO,
-        ACTIVE_LOW_SS =>ACTIVE_LOW_SS,
+U0: spi_peripheral
+generic map(
+    USE_GPIO => USE_GPIO,
+    GPIO_WIDTH => GPIO_WIDTH,
+    ACTIVE_LOW_SS => ACTIVE_LOW_SS
+)
+port map(
+    mosi => mosi,
+    miso => miso,
+    ssn => ssn,
+    ss => ss,
+    sclk => sclk,
+    gpo => gpo,
+    read_address => read_address,
+    write_address => write_address,
+    read_data => read_data,
+    write_data => write_data,
+    write_enable => write_enable,
+	read_enable => read_enable,
+    write_strobe => write_strobe,
+    clk => clk,
+    resetn => resetn    
+);
 
-		C_S_AXI_DATA_WIDTH	=> C_S00_AXI_DATA_WIDTH,
-		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
+
+U1: axi4_lite_interface_v1_0 
+generic map(
+        DATA_BUS_IS_64_BITS => is_64b_data_bus,
+        ADDR_WIDTH	=> 2,--subordinate has 4 registers
+        USE_WRITE_STROBES => true,
+        SUBORDINATE_SYNCHRONOUS_READ_PORT=> true
 	)
-	port map (
-		miso => miso, 
-		mosi=>mosi, 
-		sclk => sclk, 
-		ss => ss,
-		ssn => ssn,
-		gpo => gpo,
-		S_AXI_ACLK	=> s00_axi_aclk,
-		S_AXI_ARESETN	=> s00_axi_aresetn,
-		S_AXI_AWADDR	=> s00_axi_awaddr,
-		S_AXI_AWPROT	=> s00_axi_awprot,
-		S_AXI_AWVALID	=> s00_axi_awvalid,
-		S_AXI_AWREADY	=> s00_axi_awready,
-		S_AXI_WDATA	=> s00_axi_wdata,
-		S_AXI_WSTRB	=> s00_axi_wstrb,
-		S_AXI_WVALID	=> s00_axi_wvalid,
-		S_AXI_WREADY	=> s00_axi_wready,
-		S_AXI_BRESP	=> s00_axi_bresp,
-		S_AXI_BVALID	=> s00_axi_bvalid,
-		S_AXI_BREADY	=> s00_axi_bready,
-		S_AXI_ARADDR	=> s00_axi_araddr,
-		S_AXI_ARPROT	=> s00_axi_arprot,
-		S_AXI_ARVALID	=> s00_axi_arvalid,
-		S_AXI_ARREADY	=> s00_axi_arready,
-		S_AXI_RDATA	=> s00_axi_rdata,
-		S_AXI_RRESP	=> s00_axi_rresp,
-		S_AXI_RVALID	=> s00_axi_rvalid,
-		S_AXI_RREADY	=> s00_axi_rready
+	port map(
+        SAXI_ACLK=>SAXI_ACLK,
+        SAXI_ARESETN=>SAXI_ARESETN,
+        SAXI_AWADDR=>SAXI_AWADDR,
+        SAXI_AWPROT=>SAXI_AWPROT,
+        SAXI_AWVALID=>SAXI_AWVALID,
+        SAXI_AWREADY=>SAXI_AWREADY,
+        SAXI_WDATA=>SAXI_WDATA,
+        SAXI_WSTRB=>SAXI_WSTRB,
+        SAXI_WVALID=>SAXI_WVALID,
+        SAXI_WREADY=>SAXI_WREADY,
+        SAXI_BRESP=>SAXI_BRESP,
+        SAXI_BVALID=>SAXI_BVALID,
+        SAXI_BREADY=>SAXI_BREADY,
+        SAXI_ARADDR=>SAXI_ARADDR,
+        SAXI_ARPROT=>SAXI_ARPROT,
+        SAXI_ARVALID=>SAXI_ARVALID,
+        SAXI_ARREADY=>SAXI_ARREADY,
+        SAXI_RDATA=>SAXI_RDATA,
+        SAXI_RRESP=>SAXI_RRESP,
+        SAXI_RVALID=>SAXI_RVALID,
+        SAXI_RREADY=>SAXI_RREADY,
+        --Subordinate Interface
+        read_address=>read_address,
+        read_enable => read_enable,
+        write_address=>write_address,
+        write_enable=>write_enable,
+        read_data=>read_data,
+        write_data=>write_data,
+        write_strobe=>write_strobe,
+        clk=>clk,
+        resetn=>resetn
 	);
-
-	-- Add user logic here
-
-	-- User logic ends
 
 end arch_imp;
