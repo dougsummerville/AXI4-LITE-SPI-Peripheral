@@ -66,7 +66,7 @@ LOOPE
 
 |   |`31..........20`|`19` |`18` |`17` |`16` |`15..............0`|
 |---|----------------|-----|-----|-----|-----|-------------------|
-|R/W|`00000000000000`|LOOPE|LSBF |CPOL |CPHA | DVSR              |
+|R/W|`00000000000000`|LSBF |LOOPE|CPOL |CPHA | DVSR              |
 
 ### GPIO Output Register 
 
@@ -107,10 +107,10 @@ struct SPI_IO_BLOCK {
 #define SPI_C_CPHA(A) (((A)<<16)&SPI_C_CPHA_MASK)
 #define SPI_C_CPOL_MASK (1u<<17)
 #define SPI_C_CPOL(A) (((A)<<17)&SPI_C_CPOL_MASK)
-#define SPI_C_LSBF_MASK (1u<<18)
-#define SPI_C_LSBF(A) (((A)<<18)&SPI_C_LSBF_MASK)
-#define SPI_C_LOOPE_MASK (1u << 19)
-#define SPI_C_LOOPE(A) (((A)<<19)&SPI_C_LOOPE_MASK)
+#define SPI_C_LOOPE_MASK (1u << 18)
+#define SPI_C_LOOPE(A) (((A)<<18)&SPI_C_LOOPE_MASK)
+#define SPI_C_LSBF_MASK (1u<<19)
+#define SPI_C_LSBF(A) (((A)<<19)&SPI_C_LSBF_MASK)
 
 int main () 
 {
